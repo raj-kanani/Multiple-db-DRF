@@ -1,0 +1,31 @@
+Specific database Migrate command using : python3 manage.py --database=postgres(your_db_name)
+
+configure mongodb in ubuntu :
+# https://cloudinfrastructureservices.co.uk/how-to-create-mongodb-database-and-user-on-ubuntu-20-04/
+# https://www.youtube.com/watch?v=HSIh8UswVVY&t=12s&ab_channel=ProgrammingKnowledge
+
+db.createUser(
+  {
+    user: "new_user",
+    pwd: "user123",
+    roles: [ { role: "readWrite", db: "mongodb_user" } ]
+  }
+)
+
+command : sudo apt install mongosh
+db : mymongodb
+user_table : newdb
+
+command : mongosh
+
+# command inside the mongosh
+show dbs;
+use (db_name)
+db.createCollections("db_user")
+show collections
+db.db_user.insert({"username":"raj"})
+
+# for postgres
+
+psql -h localhost -p 5432 -U root -d postgres2
+
