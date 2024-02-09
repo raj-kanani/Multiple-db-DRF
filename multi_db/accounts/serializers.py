@@ -30,6 +30,7 @@ class AdministratorSerializer(serializers.ModelSerializer):
 
     # multiple database code
     def create(self, validated_data):
+        
         create_admins = Administrator.objects.create(
             username=validated_data['username'],
             email = validated_data['email'],
